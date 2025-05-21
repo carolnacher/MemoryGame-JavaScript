@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url('../images/space.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 60px;
+  min-height: calc(6 * 100px + 5 * 10px);
+  border-radius: 20px;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 4em;
+  color: #0ff; 
+  letter-spacing: 0.1em;
+  font-family: 'Orbitron', sans-serif; 
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+    animation: neonPulse 2s infinite ease-in-out;
+}
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 40px #0ff;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 30px #0ff,
+      0 0 60px #0ff;
+  }
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Nivel easy (4x4) */
+.grid.easy {
+    width: max-content;
+    grid-template-columns: repeat(4, 100px);
+    grid-auto-rows: 100px;
+}
+
+/* Nivel medium (6x4) */
+.grid.medium {
+    width: max-content;
+    grid-template-columns: repeat(6, 100px);
+    grid-auto-rows: 100px;
+}
+.grid.hard {
+    width: max-content;
+    grid-template-columns: repeat(6, 100px);
+    grid-auto-rows: 100px; /* Esto permite que se creen filas automáticamente */
+}
+
+.item {
+    position: relative;
+    background:  rgb(9, 1, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotateY(0deg);
+    transition: transform 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+/* Especificamos tamaños diferentes por nivel */
+.grid.easy .item {
+    width: 100px;
+    height: 100px;
+}
+
+.grid.medium .item {
+    width: 100px;
+    height: 100px;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(6, 1, 37);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+    
+}
+
+.item.boxOpen {
+    transform: rotate(180deg);
+    background: rgba(1, 1, 37, 0.5);
+}
+
+.winner-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-size: 1.4rem;
+  text-align: center;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none; 
+}
+
+.winner-message.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  animation: pop-in 0.5s ease;
+  pointer-events: none;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.difficulty-buttons button,
+#resetButton {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradiente azul espacial */
+  color: #fff;
+  border: 2px solid #00ffff; /* Borde cian brillante */
+  padding: 12px 24px;
+  font-family: 'Orbitron', sans-serif; /* Tipografía futurista (Google Fonts) */
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+  transition: all 0.3s ease-in-out;
+  margin: 5px;
+}
+
+.difficulty-buttons button:hover
+ {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  box-shadow: 0 0 15px #ffffff, 0 0 30px #00ffff inset;
+  transform: scale(1.05);
+}
+#resetButton:hover {
+  background: linear-gradient(135deg, #42055b, #180a46);
+  box-shadow: 0 0 18px #ffffff, 0 0 35px #bb9ee7 inset;
+  transform: scale(1.08);
+}
+
+/* Contenedor para los confettis */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Para que no bloquee clics, como el botón de reset */
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  color: gold;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
