@@ -32,12 +32,14 @@ export function setupGame() {
   const shuffledEmojis = shuffle([...currentLevel]);
   
   shuffledEmojis.forEach(emoji => {
-    const card = document.createElement('div');
-    card.className = 'item';
-    card.innerHTML = emoji;
-    card.addEventListener('click', handleCardClick);
-    grid.appendChild(card);
-  });
+  const card = document.createElement('div');
+  card.className = 'item';
+  card.innerHTML = `<span class="emoji">${emoji}</span>`;
+
+  card.addEventListener('click', handleCardClick);
+  grid.appendChild(card);
+});
+
 }
 
 function handleCardClick() {

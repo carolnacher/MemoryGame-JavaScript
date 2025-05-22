@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trivia Espacial</title>
+  <link rel="stylesheet" href="styles/triviaStyles.css">
+  <link rel="stylesheet" href="styles/basicStyles.css">
+</head>
+
+<body>
+  <div class="trivia-container">
+
+    <button class="back" onclick="location.href='index.html'">Back to Menu</button>
+
+    <h1>Space Trivia</h1>
+    <p id="triviaTimer"></p>
+    <div id="triviaQuestion" class="question"></div>
+
+    <div id="difficultyButtons" style="display: none;">
+      <button class="difficulty-btn easy" onclick="selectDifficulty('Easy')">Easy</button>
+      <button class="difficulty-btn medium" onclick="selectDifficulty('Medium')">Medium</button>
+      <button class="difficulty-btn hard" onclick="selectDifficulty('Hard')">Hard</button>
+    </div>
+
+    <div id="customPrompt" class="modal hidden">
+      <div class="modal-content">
+        <p>🎉 ¡Trivia completada! ¿Cuál es tu nombre?</p>
+        <input type="text" id="playerName" placeholder="Escribí tu nombre...">
+        <button id="submitNameBtn">Guardar</button>
+      </div>
+    </div>
+
+
+    <div id="triviaOptions" class="options"></div>
+    <p id="triviaFeedback" class="feedback"></p>
+    <button id="nextQuestionBtn" class="next-btn">Next</button>
+    <button id="restartBtn" style="display: none;">Restart</button>
+
+  </div>
+
+  <script type="module" src="javascripts/trivia/trivialogic.js"></script>
+
+</body>
+
+</html>

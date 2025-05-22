@@ -226,3 +226,8 @@ h2 {
     opacity: 0;
   }
 }
+.item .emoji {
+  font-size: 2.5rem;  /* Aumentá o disminuí según el tamaño deseado */
+  pointer-events: none; /* Asegura que el clic siga funcionando en .item */
+  transform: rotatex(180deg);
+}

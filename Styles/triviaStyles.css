@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+
+body {
+  background: radial-gradient(circle at top, #0d0d2b, #000);
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.trivia-container {
+  background-color: rgba(0, 0, 50, 0.8);
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0ff;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-btn {
+  background: linear-gradient(135deg, #111, #333);
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.option-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #fff, 0 0 30px #0ff inset;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px #fff;
+  transition: background 0.3s;
+}
+
+.next-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.correct {
+  background-color: #d4edda;
+  color: #155724;
+  border: 2px solid #c3e6cb;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+#restartBtn {
+  background:  rgba(0, 0, 50, 0.6);
+  color: #0ff;
+  box-shadow: 0 0 6px #0ff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  
+}
+
+#restartBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #0ff, 0 0 15px #0ff inset;
+}
+
+
+#triviaFeedback {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.difficulty-btn {
+  font-family: 'Orbitron', sans-serif;
+  padding: 05px 10px;
+  margin: 15px;
+  font-size: 0.9rem;
+  border: 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color:  rgba(0, 0, 50, 0.6);
+  text-shadow: 0 0 5px white, 0 0 10px white;
+  animation: neon-pulse 1.5s infinite alternate;
+}
+
+/* Hover efecto zoom + brillo más fuerte */
+.difficulty-btn:hover {
+  transform: scale(1.08);
+  filter: brightness(1.4);
+}
+
+/* Pulso general para neón */
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 8px currentColor, 0 0 15px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 35px currentColor;
+  }
+}
+
+/* Nivel fácil - verde neón */
+.easy {
+  color: #39ff14;
+  border-color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  box-shadow: 0 0 5px #39ff14, 0 0 5px #39ff14;
+}
+
+/* Nivel medio - dorado neón */
+.medium {
+  color: #ffd700;
+  border-color: #ffd700;
+  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700;
+  box-shadow: 0 0 2px #ffd700, 0 0 2px #ffd700;
+}
+
+/* Nivel difícil - rojo neón */
+.hard {
+  color: #ff073a;
+  border-color: #ff073a;
+  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a;
+  box-shadow: 0 0 2px #ff073a, 0 0 2px #ff073a;
+}
+
+/*prueba*/
+#triviaContainer {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#triviaQuestion {
+  font-size: 1.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+  animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 8px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+}
+
+#triviaOptions button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 25px;
+  min-width: 250px;
+  height: 60px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #ff00ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #ff00ff;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff inset;
+  white-space: normal;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#triviaOptions button:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 0, 255, 0.1);
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff inset;
+}
+
+/*cartel de ganador*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff;
+  text-align: center;
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.modal-content input {
+  padding: 10px;
+  border: 2px solid #00ffff;
+  background: transparent;
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  width: 80%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #ff00ff;
+  color: #fff;
+  text-shadow: 0 0 5px #ff00ff;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff inset;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+}

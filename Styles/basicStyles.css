@@ -1,0 +1,72 @@
+
+body {
+  height: 100vh; /* Alto de la pantalla completa */
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  background: url('../images/space.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  background: rgba(0, 0, 50, 0.6); /* fondo azul oscuro translúcido */
+  border: 2px solid #0ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+  animation: glowBox 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowBox {
+  0% {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+  }
+  100% {
+    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff inset;
+  }
+}
+
+.button-container button {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  margin: 10px;
+  border-radius: 12px;
+  border: 2px solid #0ff;
+  background: linear-gradient(135deg, #111, #222);
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.button-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #222, #000);
+  box-shadow: 0 0 20px #fff, 0 0 30px #0ff inset;
+}
+.back {
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1.5px solid #0ff;
+  background:  rgba(0, 0, 50, 0.6);
+  color: #0ff;
+  box-shadow: 0 0 6px #0ff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #0ff, 0 0 15px #0ff inset;
+}

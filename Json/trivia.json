@@ -1,0 +1,66 @@
+[
+  {
+    "difficulty": "Easy",
+    "question": "¿Cuál es el planeta más cercano al Sol?",
+    "options": ["Mercurio", "Venus", "Tierra", "Marte"],
+    "answer": "Mercurio"
+  },
+  {
+    "difficulty": "Easy",
+    "question": "¿Cómo se llama el satélite natural de la Tierra?",
+    "options": ["Estrella", "Luna", "Sol", "Cometa"],
+    "answer": "Luna"
+  },
+  {
+    "difficulty": "Easy",
+    "question": "¿Qué planeta es conocido como el planeta rojo?",
+    "options": ["Saturno", "Marte", "Júpiter", "Urano"],
+    "answer": "Marte"
+  },
+  {
+    "difficulty": "Medium",
+    "question": "¿Qué planeta tiene la gravedad más fuerte?",
+    "options": ["Tierra", "Marte", "Júpiter", "Saturno"],
+    "answer": "Júpiter"
+  },
+  {
+    "difficulty": "Medium",
+    "question": "¿Qué es una supernova?",
+    "options": ["Un agujero negro", "Una explosión estelar", "Un satélite", "Una galaxia"],
+    "answer": "Una explosión estelar"
+  },
+  {
+    "difficulty": "Medium",
+    "question": "¿Qué planeta tiene un día más largo que su año?",
+    "options": ["Venus", "Mercurio", "Neptuno", "Marte"],
+    "answer": "Venus"
+  },
+  {
+    "difficulty": "Hard",
+    "question": "¿Qué es un agujero negro?",
+    "options": [
+      "Un lugar sin gravedad",
+      "Una estrella en formación",
+      "Una región del espacio con gravedad tan intensa que nada puede escapar",
+      "Un tipo de cometa"
+    ],
+    "answer": "Una región del espacio con gravedad tan intensa que nada puede escapar"
+  },
+  {
+    "difficulty": "Hard",
+    "question": "¿Qué planeta rota de lado, con un eje de rotación inclinado 98 grados?",
+    "options": ["Urano", "Neptuno", "Venus", "Saturno"],
+    "answer": "Urano"
+  },
+  {
+    "difficulty": "Hard",
+    "question": "¿Qué es la luz zodiacal?",
+    "options": [
+      "Un reflejo del Sol en el agua",
+      "Un tipo de aurora boreal",
+      "Luz solar dispersada por polvo espacial en el plano de la eclíptica",
+      "Luz de estrellas del zodíaco"
+    ],
+    "answer": "Luz solar dispersada por polvo espacial en el plano de la eclíptica"
+  }
+]

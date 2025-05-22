@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="Styles/stylesMemory.css">
+    <link rel="stylesheet" href="Styles/basicStyles.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="back" onclick="location.href='index.html'">Volver al Menú</button>
+        <h2>Memory Game</h2>
+        <div class="grid"></div>
+        <div class="difficulty-buttons">
+            <button onclick="currentLevel = levels.easy; setupGame(currentLevel)">Fácil</button>
+            <button onclick="currentLevel = levels.medium; setupGame(currentLevel)">Medio</button>
+            <button onclick="currentLevel = levels.hard; setupGame(currentLevel)">Difícil</button>
+        </div>
+
+        <div class="winner-message" id="winnerMessage"></div>
+        <button class="reset" id="resetButton">Reset</button>
+
+    </div>
+    <script type="module" src="Javascripts/memory/main.js"></script>
+</body>
+
+</html>
