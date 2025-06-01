@@ -104,6 +104,7 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Orbitron', sans-serif;
+
   
 }
 
@@ -138,13 +139,13 @@ h1 {
   animation: neon-pulse 1.5s infinite alternate;
 }
 
-/* Hover efecto zoom + brillo más fuerte */
+
 .difficulty-btn:hover {
   transform: scale(1.08);
   filter: brightness(1.4);
 }
 
-/* Pulso general para neón */
+/* efect neón pulse */
 @keyframes neon-pulse {
   0% {
     box-shadow: 0 0 8px currentColor, 0 0 15px currentColor;
@@ -154,7 +155,8 @@ h1 {
   }
 }
 
-/* Nivel fácil - verde neón */
+/*efect neon color Depending on the level*/
+
 .easy {
   color: #39ff14;
   border-color: #39ff14;
@@ -162,7 +164,7 @@ h1 {
   box-shadow: 0 0 5px #39ff14, 0 0 5px #39ff14;
 }
 
-/* Nivel medio - dorado neón */
+
 .medium {
   color: #ffd700;
   border-color: #ffd700;
@@ -170,7 +172,7 @@ h1 {
   box-shadow: 0 0 2px #ffd700, 0 0 2px #ffd700;
 }
 
-/* Nivel difícil - rojo neón */
+
 .hard {
   color: #ff073a;
   border-color: #ff073a;
@@ -178,7 +180,7 @@ h1 {
   box-shadow: 0 0 2px #ff073a, 0 0 2px #ff073a;
 }
 
-/*prueba*/
+
 #triviaContainer {
   background-color: #111;
   padding: 30px;
@@ -237,7 +239,7 @@ h1 {
   box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff inset;
 }
 
-/*cartel de ganador*/
+/*Winner Message*/
 
 .modal {
   position: fixed;

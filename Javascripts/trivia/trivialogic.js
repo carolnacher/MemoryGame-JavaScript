@@ -44,7 +44,7 @@ function loadQuestions() {
 
 window.onload = loadQuestions;
 
-// Filtra por dificultad y comienza el juego
+//This  function is in charge to select the difficulty of the questions.
 function selectDifficulty(level) {
   document.getElementById("difficultyButtons").style.display = "none";
   questions = allQuestions.filter(q => q.difficulty === level);
@@ -56,6 +56,9 @@ function selectDifficulty(level) {
     document.getElementById("triviaOptions").innerHTML = "";
   }
 }
+
+//the function is in charge to show the questions
+
 function showQuestion() {
   const current = questions[currentIndex];
   document.getElementById("triviaQuestion").textContent = current.question;
@@ -81,7 +84,7 @@ function showQuestion() {
 
 window.selectDifficulty = selectDifficulty;
 function checkAnswer(selectedOption) {
-  // Evitar que se pueda responder dos veces
+  // this part the code prevent the user ansewer more than one time.
   if (document.getElementById("nextQuestionBtn").style.display === "block") {
     return;
   }
@@ -94,17 +97,17 @@ function checkAnswer(selectedOption) {
   const feedbackEl = document.getElementById("triviaFeedback");
   if (selectedOption === current.answer) {
     score++;
-    feedbackEl.textContent = "✅ ¡Correcto!";
+    feedbackEl.textContent = "✅ ¡Congratulations is correct!";
     feedbackEl.style.color = "green";
   } else if (selectedOption === null) {
-    feedbackEl.textContent = "⏰ Se acabó el tiempo. La respuesta correcta era: " + current.answer;
+    feedbackEl.textContent = "⏰ Time's up. The correct answer was: " + current.answer;
     feedbackEl.style.color = "orange";
   } else {
-    feedbackEl.textContent = "❌ Incorrecto. La respuesta correcta es: " + current.answer;
+    feedbackEl.textContent = "❌ Incorrect. The correct answer is: " + current.answer;
     feedbackEl.style.color = "red";
   }
 
-  // Mostrar botón siguiente
+  //this is charge to show the next question.
   setTimeout(() => {
     currentIndex++;
     if (currentIndex < questions.length) {
@@ -116,6 +119,7 @@ function checkAnswer(selectedOption) {
   }, 1000);
 }
 
+//this functions stop the timer when the user answer the question or when the time is over.
 function stopTimer() {
   clearInterval(timer);
 }
@@ -125,17 +129,17 @@ document.getElementById("nextQuestionBtn").addEventListener("click", () => {
   if (currentIndex < questions.length) {
     showQuestion();
   } else {
-    // Mostrar modal personalizado
+    
     document.getElementById("customPrompt").classList.remove("hidden");
   }
 });
 
 
-// Al hacer clic en "Guardar"
+// when the user clicks the submit button the name are saved and the score are saved.
 document.getElementById("submitNameBtn").addEventListener("click", () => {
   const name = document.getElementById("playerName").value.trim();
-  console.log("Nombre ingresado:", name);
-  console.log("Puntaje actual:", score);
+  console.log("Name:", name);
+  console.log("Current score:", score);
   if (name) {
     saveScore(name, score, totalTime);
     showLeaderboard();
@@ -143,18 +147,18 @@ document.getElementById("submitNameBtn").addEventListener("click", () => {
     document.getElementById("restartBtn").style.display = "block";
     document.getElementById("difficultyButtons").style.display = "none";
   } else {
-    alert("Por favor, ingresá tu nombre.");
+    alert("Congratulations, you've completed the trivia! Please enter your name.");
   }
 });
 
 
 document.getElementById("restartBtn").addEventListener("click", () => {
-  // Reiniciar estado
+  // Restart the state of the game
   currentIndex = 0;
   score = 0;
   questions = [];
 
-  // Ocultar elementos del juego
+  // hidden the element by default
   document.getElementById("triviaQuestion").textContent = "";
   document.getElementById("triviaOptions").innerHTML = "";
   document.getElementById("triviaFeedback").textContent = "";
@@ -163,7 +167,7 @@ document.getElementById("restartBtn").addEventListener("click", () => {
 
 
 
-  // Mostrar botones de dificultad
+  // the buttons are hidden by default
   document.getElementById("difficultyButtons").style.display = "block";
 });
 

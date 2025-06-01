@@ -68,14 +68,14 @@ h2 {
     justify-content: center;
 }
 
-/* Nivel easy (4x4) */
+
 .grid.easy {
     width: max-content;
     grid-template-columns: repeat(4, 100px);
     grid-auto-rows: 100px;
 }
 
-/* Nivel medium (6x4) */
+
 .grid.medium {
     width: max-content;
     grid-template-columns: repeat(6, 100px);
@@ -84,7 +84,7 @@ h2 {
 .grid.hard {
     width: max-content;
     grid-template-columns: repeat(6, 100px);
-    grid-auto-rows: 100px; /* Esto permite que se creen filas automáticamente */
+    grid-auto-rows: 100px; 
 }
 
 .item {
@@ -100,7 +100,7 @@ h2 {
     height: 100%;
 }
 
-/* Especificamos tamaños diferentes por nivel */
+/* Depending on the level, the size is specified */
 .grid.easy .item {
     width: 100px;
     height: 100px;
@@ -170,11 +170,11 @@ h2 {
 
 .difficulty-buttons button,
 #resetButton {
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradiente azul espacial */
+  background: linear-gradient(135deg, #1e3c72, #2a5298); 
   color: #fff;
-  border: 2px solid #00ffff; /* Borde cian brillante */
+  border: 2px solid #00ffff;
   padding: 12px 24px;
-  font-family: 'Orbitron', sans-serif; /* Tipografía futurista (Google Fonts) */
+  font-family: 'Orbitron', sans-serif; 
   font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
@@ -195,14 +195,14 @@ h2 {
   transform: scale(1.08);
 }
 
-/* Contenedor para los confettis */
+/* confettis efect */
 .confetti-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* Para que no bloquee clics, como el botón de reset */
+  pointer-events: none;
   overflow: hidden;
   z-index: 1000;
 }
@@ -227,7 +227,7 @@ h2 {
   }
 }
 .item .emoji {
-  font-size: 2.5rem;  /* Aumentá o disminuí según el tamaño deseado */
-  pointer-events: none; /* Asegura que el clic siga funcionando en .item */
+  font-size: 2.5rem;  
+  pointer-events: none; 
   transform: rotatex(180deg);
 }

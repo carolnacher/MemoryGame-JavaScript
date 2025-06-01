@@ -1,10 +1,10 @@
 
 body {
-  height: 100vh; /* Alto de la pantalla completa */
+  height: 100vh; 
   margin: 0;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
+  justify-content: center; 
+  align-items: center;     
   background: url('../images/space.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Orbitron', sans-serif;

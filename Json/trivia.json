@@ -1,66 +1,120 @@
 [
   {
     "difficulty": "Easy",
-    "question": "¿Cuál es el planeta más cercano al Sol?",
-    "options": ["Mercurio", "Venus", "Tierra", "Marte"],
-    "answer": "Mercurio"
+    "question": "What is the closest planet to the Sun?",
+    "options": ["Mercury", "Venus", "Earth", "Mars"],
+    "answer": "Mercury"
   },
   {
     "difficulty": "Easy",
-    "question": "¿Cómo se llama el satélite natural de la Tierra?",
-    "options": ["Estrella", "Luna", "Sol", "Cometa"],
-    "answer": "Luna"
+    "question": "What is the name of Earth's natural satellite?",
+    "options": ["Star", "Moon", "Sun", "Comet"],
+    "answer": "Moon"
   },
   {
     "difficulty": "Easy",
-    "question": "¿Qué planeta es conocido como el planeta rojo?",
-    "options": ["Saturno", "Marte", "Júpiter", "Urano"],
-    "answer": "Marte"
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Saturn", "Mars", "Jupiter", "Uranus"],
+    "answer": "Mars"
+  },
+    {
+    "difficulty": "Easy",
+    "question": "Which planet do we live on?",
+    "options": ["Mars", "Venus", "Earth", "Jupiter"],
+    "answer": "Earth"
+  },
+  {
+    "difficulty": "Easy",
+    "question": "What is the name of the galaxy that contains our Solar System?",
+    "options": ["Andromeda", "Milky Way", "Orion", "Centaurus A"],
+    "answer": "Milky Way"
+  },
+  {
+    "difficulty": "Easy",
+    "question": "Which planet is famous for its rings?",
+    "options": ["Earth", "Venus", "Saturn", "Mars"],
+    "answer": "Saturn"
   },
   {
     "difficulty": "Medium",
-    "question": "¿Qué planeta tiene la gravedad más fuerte?",
-    "options": ["Tierra", "Marte", "Júpiter", "Saturno"],
-    "answer": "Júpiter"
+    "question": "What is the name of the fifth planet from the Sun?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "answer": "Jupiter"
   },
   {
     "difficulty": "Medium",
-    "question": "¿Qué es una supernova?",
-    "options": ["Un agujero negro", "Una explosión estelar", "Un satélite", "Una galaxia"],
-    "answer": "Una explosión estelar"
+    "question": "Which celestial body defines the boundary of the Solar System?",
+    "options": ["The Kuiper Belt", "Oort Cloud", "Asteroid Belt", "Pluto"],
+    "answer": "Oort Cloud"
   },
   {
     "difficulty": "Medium",
-    "question": "¿Qué planeta tiene un día más largo que su año?",
-    "options": ["Venus", "Mercurio", "Neptuno", "Marte"],
+    "question": "What is the name of the largest moon of Saturn?",
+    "options": ["Europa", "Ganymede", "Titan", "Io"],
+    "answer": "Titan"
+  },
+  {
+    "difficulty": "Medium",
+    "question": "Which planet has the strongest gravity?",
+    "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+    "answer": "Jupiter"
+  },
+  {
+    "difficulty": "Medium",
+    "question": "What is a supernova?",
+    "options": ["A black hole", "A stellar explosion", "A satellite", "A galaxy"],
+    "answer": "A stellar explosion"
+  },
+  {
+    "difficulty": "Medium",
+    "question": "Which planet has a day longer than its year?",
+    "options": ["Venus", "Mercury", "Neptune", "Mars"],
     "answer": "Venus"
   },
   {
     "difficulty": "Hard",
-    "question": "¿Qué es un agujero negro?",
+    "question": "What is a black hole?",
     "options": [
-      "Un lugar sin gravedad",
-      "Una estrella en formación",
-      "Una región del espacio con gravedad tan intensa que nada puede escapar",
-      "Un tipo de cometa"
+      "A place without gravity",
+      "A star in formation",
+      "A region of space with gravity so intense that nothing can escape",
+      "A type of comet"
     ],
-    "answer": "Una región del espacio con gravedad tan intensa que nada puede escapar"
+    "answer": "A region of space with gravity so intense that nothing can escape"
   },
   {
     "difficulty": "Hard",
-    "question": "¿Qué planeta rota de lado, con un eje de rotación inclinado 98 grados?",
-    "options": ["Urano", "Neptuno", "Venus", "Saturno"],
-    "answer": "Urano"
+    "question": "Which planet rotates on its side, with a rotational axis tilted 98 degrees?",
+    "options": ["Uranus", "Neptune", "Venus", "Saturn"],
+    "answer": "Uranus"
   },
   {
     "difficulty": "Hard",
-    "question": "¿Qué es la luz zodiacal?",
+    "question": "What is zodiacal light?",
     "options": [
-      "Un reflejo del Sol en el agua",
-      "Un tipo de aurora boreal",
-      "Luz solar dispersada por polvo espacial en el plano de la eclíptica",
-      "Luz de estrellas del zodíaco"
+      "A reflection of the Sun on water",
+      "A type of aurora borealis",
+      "Sunlight scattered by space dust in the plane of the ecliptic",
+      "Light from zodiac stars"
     ],
-    "answer": "Luz solar dispersada por polvo espacial en el plano de la eclíptica"
+    "answer": "Sunlight scattered by space dust in the plane of the ecliptic"
+  },
+  {
+    "difficulty": "Hard",
+    "question": "What is the name of the effect that causes the universe to expand faster over time?",
+    "options": ["Gravitational pull", "Dark matter", "Dark energy", "Cosmic radiation"],
+    "answer": "Dark energy"
+  },
+  {
+    "difficulty": "Hard",
+    "question": "Which planet has the most moons?",
+    "options": ["Jupiter", "Uranus", "Neptune", "Saturn"],
+    "answer": "Saturn"
+  },
+  {
+    "difficulty": "Hard",
+    "question": "What is the name of the theoretical boundary around a black hole where nothing can escape?",
+    "options": ["White hole", "Wormhole", "Event horizon", "Singularity"],
+    "answer": "Event horizon"
   }
 ]
