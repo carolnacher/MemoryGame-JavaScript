@@ -140,7 +140,7 @@ function createConfetti() {
   container.classList.add('confetti-container');
   document.body.appendChild(container);
 
-  const total = 30; // Number of confetti pieces
+  const total = 60; // Number of confetti pieces
 
   for (let i = 0; i < total; i++) {
     const confetti = document.createElement('span');
@@ -155,7 +155,7 @@ function createConfetti() {
     confetti.style.animationDelay = (Math.random() * 5) + 's';
   }
 
-  // Optional: remove confetti from DOM after 8 seconds
+  //remove confetti from DOM after 8 seconds
   setTimeout(() => {
     container.remove();
   }, 8000);
